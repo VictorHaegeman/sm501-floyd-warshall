@@ -1,4 +1,4 @@
-# Projet SM501 – Algorithme de Floyd–Warshall
+# Projet Graphes – Algorithme de Floyd–Warshall
 
 Ce dépôt contient :
 
