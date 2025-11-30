@@ -3,7 +3,7 @@
 #include "floyd.h"
 
 /*
-   Conformément au cours :
+   Psuedo code du cours :
    L[i][j] = coût(i,j)
    P[i][j] = i si arc existant, sinon -1
 */
@@ -14,7 +14,7 @@ void floyd_warshall(Graph *g, int ***L_out, int ***P_out) {
     int **L = alloc_int_matrix(n);
     int **P = alloc_int_matrix(n);
 
-    // --- INITIALISATION ---
+    // INITIALISATION 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
 
@@ -55,7 +55,7 @@ int floyd_contains_negative_cycle(int **L, int n) {
     return 0;
 }
 
-// -------- Reconstruction des chemins (cours) ---------
+// Reconstruction des chemins
 
 static void print_path_rec(int **P, int i, int j) {
     if (i == j) {

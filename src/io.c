@@ -2,13 +2,13 @@
 #include "io.h"
 #include "floyd.h"
 
-/* Largeur des colonnes pour avoir matrices lisibles */
+// Largeur des colonnes pour avoir matrices lisibles 
 #define COLW 10
 
 void print_int_matrix(const char *title, int **mat, int n) {
     if (title) printf("%s\n", title);
 
-    /* En-tête */
+    // En-tête
     printf("     ");
     for (int j = 0; j < n; j++)
         printf("%*d", COLW, j);
@@ -20,12 +20,12 @@ void print_int_matrix(const char *title, int **mat, int n) {
             printf("-");
     printf("\n");
 
-    /* Lignes */
+    // Lignes
     for (int i = 0; i < n; i++) {
         printf("%3d |", i);
         for (int j = 0; j < n; j++) {
             if (mat[i][j] == INF)
-                printf("%*s", COLW, "INF");
+                printf("%*s", COLW, "-");
             else
                 printf("%*d", COLW, mat[i][j]);
         }
@@ -66,7 +66,7 @@ void interactive_shortest_paths(Graph *g, int **L, int **P) {
             continue;
         }
 
-        while (getchar() != '\n'); /* Nettoyer entrée */
+        while (getchar() != '\n'); // Nettoyer entrée
 
         if (src < 0 || src >= n || dst < 0 || dst >= n) {
             printf("Indices hors limites (0..%d).\n\n", n - 1);

@@ -7,7 +7,7 @@
 int main() {
     char fname[256];
 
-    printf("=== Floyd-Warshall – Projet SM501 ===\n\n");
+    printf("=== Floyd-Warshall – Projet Graphes & Automates ===\n\n");
 
     while (1) {
         printf("Nom du fichier (ou 'q' pour quitter) : ");
