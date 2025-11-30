@@ -25,7 +25,7 @@ void print_int_matrix(const char *title, int **mat, int n) {
         printf("%3d |", i);
         for (int j = 0; j < n; j++) {
             if (mat[i][j] == INF)
-                printf("%*s", COLW, "-");
+                printf("%*s", COLW, "INF");
             else
                 printf("%*d", COLW, mat[i][j]);
         }

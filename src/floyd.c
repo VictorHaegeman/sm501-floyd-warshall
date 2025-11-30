@@ -4,8 +4,12 @@
 
 /*
    Psuedo code du cours :
-   L[i][j] = coût(i,j)
-   P[i][j] = i si arc existant, sinon -1
+   pour k = 0 à n−1 :
+    pour i = 0 à n−1 :
+        pour j = 0 à n−1 :
+            si L[i] [k] + L[k] [j] < L[i] [j] :
+                L[i] [j] = L[i] [k] + L[k] [j]
+                P[i] [j] = P[k] [j]
 */
 
 void floyd_warshall(Graph *g, int ***L_out, int ***P_out) {
@@ -39,7 +43,7 @@ void floyd_warshall(Graph *g, int ***L_out, int ***P_out) {
 
                 if (new_cost < L[i][j]) {
                     L[i][j] = new_cost;
-                    P[i][j] = P[k][j];   // EXACTEMENT COMME DANS LE COURS
+                    P[i][j] = P[k][j];   // EXACTEMENT COMME DANS LE COURS (Diapo 3 syllabus)
                 }
             }
         }
