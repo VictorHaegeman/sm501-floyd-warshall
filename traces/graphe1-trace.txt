@@ -1,0 +1,23 @@
+=== Floyd-Warshall – Projet SM501 ===
+
+Nom du fichier (ou 'q' pour quitter) : tests/graphe1.txt
+
+Graphe chargé depuis 'tests/graphe1.txt'
+Matrice des poids :
+              0         1         2         3
+     ----------------------------------------
+  0 |         0         1         5       INF
+  1 |       INF         0         3         5
+  2 |       INF       INF         0         2
+  3 |       INF       INF       INF         0
+
+Distances minimales :
+              0         1         2         3
+     ----------------------------------------
+  0 |         0         1         4         6
+  1 |       INF         0         3         5
+  2 |       INF       INF         0         2
+  3 |       INF       INF       INF         0
+
+Afficher un plus court chemin ? (o/n) n
+Fin de la recherche de chemins.

@@ -1,0 +1,16 @@
+Nom du fichier (ou 'q' pour quitter) : tests/graphe4.txt
+
+Graphe chargé depuis 'tests/graphe4.txt'
+Matrice des poids :
+              0         1         2         3
+     ----------------------------------------
+  0 |         0         1        -5       INF
+  1 |       INF         0        -3         2
+  2 |       INF        -1         0         2
+  3 |       INF       INF       INF         0
+
+
+==============================================
+⚠️  CIRCUIT ABSORBANT DÉTECTÉ !
+⚠️  Les distances minimales NE SONT PAS VALABLES.
+==============================================
